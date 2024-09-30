@@ -17,6 +17,7 @@ class LikeAdmin(admin.ModelAdmin):
     list_display = (
         "user",
         "tweet",
+        "likes_count",
         "created_at",
         "updated_at",
     )
