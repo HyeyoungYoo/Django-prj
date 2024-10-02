@@ -1,0 +1,11 @@
+<h1>{{title}}</h1>
+
+<ul>
+  {% for tweet in tweets %}
+  <li><a href="/tweets/{{tweet.pk}}">
+        {{tweet.name}}<br /></li>
+     {% for like in tweet.likes.all %}
+        <span>-{{like.name}}<br /></span>
+     {% endfor %}</a>
+  {% endfor %}
+</ul>
